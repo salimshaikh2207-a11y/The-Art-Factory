@@ -33,3 +33,23 @@ html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif
 .preview-overlay small{margin-top:10px;font:700 clamp(9px,1.4vw,18px)/1 Arial,Helvetica,sans-serif;color:#ddd;letter-spacing:5px}
 .engraved-material-grid{grid-template-columns:1fr 1fr}
 @media(max-width:680px){.engraved-material-grid{grid-template-columns:1fr}.engraved-live-preview{max-width:none}}
+
+.category-grid-three{grid-template-columns:repeat(3,1fr)}
+.section-pad-inner{padding:50px 0 0}
+.size-strip,.option-matrix{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.size-strip span,.option-matrix span{background:#fff;border:1px solid var(--line);padding:14px;font-size:12px}
+.option-matrix{grid-template-columns:1fr 1fr}
+.customizer-workspace{margin-top:34px}
+.generic-live-preview{width:100%;max-width:760px;background:#d9d1c4;padding:40px;display:flex;align-items:center;justify-content:center;min-height:360px}
+.generic-plate{width:82%;min-height:210px;padding:40px 25px;background:#1c201f;color:#fff;border:2px solid #8b918a;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 18px 38px #0002}
+.generic-plate span{font:700 clamp(22px,5vw,58px)/1 Arial,Helvetica,sans-serif}
+.generic-plate small{margin-top:14px;font:700 clamp(9px,1.5vw,17px)/1 Arial,Helvetica,sans-serif;letter-spacing:5px;color:#d8d8d2}
+.generic-plate[data-material="Glass"]{background:#fff;color:#191918;border-color:#999}
+.generic-plate[data-plate="Black Glass"]{background:#111;color:#fff;border-color:#111}
+.generic-plate[data-plate="White Glass"]{background:#fff;color:#191918;border-color:#aaa}
+.generic-plate[data-plate="Gold Mirror"],.generic-plate[data-letter="Gold"]{ }
+.generic-plate[data-led="Warm White LED"]{box-shadow:0 0 35px rgba(255,215,145,.85),0 18px 38px #0002}
+.generic-plate[data-led="Cool White LED"]{box-shadow:0 0 35px rgba(180,220,255,.85),0 18px 38px #0002}
+.generic-plate[data-led="RGB LED"]{box-shadow:0 0 24px #7df,0 0 44px #a7f,0 18px 38px #0002}
+@media(max-width:900px){.category-grid-three{grid-template-columns:1fr}.size-strip{grid-template-columns:1fr 1fr}.option-matrix{grid-template-columns:1fr}}
+@media(max-width:680px){.section-pad-inner{padding-top:35px}.generic-live-preview{padding:20px;min-height:280px}.generic-plate{width:95%;min-height:170px;padding:28px 14px}}
