@@ -69,13 +69,23 @@ function initCustomizer(){
 function initCart(){
   const el=document.querySelector("#cartItems"); if(!el)return;
   if(!cart.length){el.innerHTML='<div class="empty-state"><h2>Your cart is empty</h2><p>Start with a nameplate design and customise it to your space.</p><a class="btn btn-dark" href="shop.html">Browse Nameplates</a></div>';return;}
-  const total=cart.reduce((s,x)=>s+Number(x.price||0),0);
-  el.innerHTML=cart.map((x,i)=>'<div class="cart-row"><div><b>'+x.product+'</b><div>'+x.name+(x.number?" · "+x.number:"")+'</div><small>'+x.material+' · '+x.size+' · Plate: '+x.plateColor+' · Letters: '+x.letterColor+(x.material==="Glass"?" · Diamond: "+x.diamond+" · LED: "+x.led:"")+'</small></div><div><b>'+money(x.price)+'</b><button class="remove-btn" data-i="'+i+'">Remove</button></div></div>').join("")+'<div class="cart-total"><span>Total</span><strong>'+money(total)+'</strong></div><a id="waOrder" class="btn btn-dark" href="#">Send Order on WhatsApp</a>';
+  const hasQuote=cart.some(x=>x.quote);
+  const numericTotal=cart.reduce((sum,x)=>sum+(x.quote?0:Number(x.price||0)),0);
+  el.innerHTML=cart.map((x,i)=>{
+    const extras=x.design?(" · Design: "+x.design+" · Shape: "+x.shape+" · Language: "+x.language+" · Font: "+x.font+" · LED: "+x.led):("");
+    const pricing=x.quote?"Quote on request":money(x.price);
+    return '<div class="cart-row"><div><b>'+x.product+'</b><div>'+x.name+(x.number?" · "+x.number:"")+'</div><small>'+x.material+' · '+x.size+extras+(x.plateColor?" · Plate: "+x.plateColor:"")+(x.letterColor?" · Letters: "+x.letterColor:"")+(x.diamond?" · Diamond: "+x.diamond:"")+'</small></div><div><b>'+pricing+'</b><button class="remove-btn" data-i="'+i+'">Remove</button></div></div>';
+  }).join("")+'<div class="cart-total"><span>'+ (hasQuote?"Estimated total":"Total") +'</span><strong>'+ (hasQuote?"Quote required":money(numericTotal)) +'</strong></div><a id="waOrder" class="btn btn-dark" href="#">Send Order on WhatsApp</a>';
   el.querySelectorAll(".remove-btn").forEach(btn=>btn.onclick=()=>{cart.splice(Number(btn.dataset.i),1);saveCart();location.reload();});
   const lines=["Hello The Art Factory, I would like to place an order:"];
-  cart.forEach((x,i)=>lines.push((i+1)+". "+x.product+" | Material: "+x.material+" | Name: "+x.name+" | No: "+(x.number||"-")+" | Size: "+x.size+" | Plate: "+x.plateColor+" | Letters: "+x.letterColor+" | Diamond: "+(x.material==="Glass"?x.diamond:"N/A")+" | LED: "+(x.material==="Glass"?x.led:"N/A")+" | Price: "+money(x.price)));
-  lines.push("Total: "+money(total));
+  cart.forEach((x,i)=>{
+    if(x.quote){
+      lines.push((i+1)+". "+x.product+" | Material: "+x.material+" | Design: "+x.design+" | Shape: "+x.shape+" | Name: "+x.name+" | No: "+(x.number||"-")+" | Size: "+x.size+" | Language: "+x.language+" | Font: "+x.font+" | Letters: "+x.letterColor+" | LED: "+x.led+" | Price: Quote on request");
+    }else{
+      lines.push((i+1)+". "+x.product+" | Material: "+x.material+" | Name: "+x.name+" | No: "+(x.number||"-")+" | Size: "+x.size+" | Plate: "+x.plateColor+" | Letters: "+x.letterColor+(x.material==="Glass"?" | Diamond: "+x.diamond+" | LED: "+x.led:"")+" | Price: "+money(x.price));
+    }
+  });
+  if(hasQuote)lines.push("Pricing: Quote required for one or more customised items.");
+  else lines.push("Total: "+money(numericTotal));
   const wa=document.querySelector("#waOrder"); if(wa)wa.href="https://wa.me/919870539815?text="+encodeURIComponent(lines.join("\n"));
 }
-function init(){updateCart();renderProducts();initCustomizer();initCart();const m=document.querySelector("#menuBtn"),n=document.querySelector("#mobileNav");if(m&&n)m.onclick=()=>n.classList.toggle("open");}
-document.addEventListener("DOMContentLoaded",init);
