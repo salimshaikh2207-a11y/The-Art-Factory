@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+<title id="t">Botanical Corner engraved charcoal nameplate</title><desc id="d">Dark charcoal rectangular plate with engraved botanical corner artwork, a double frame and raised lettering.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#292e2b"/><stop offset="1" stop-color="#0d1010"/></linearGradient></defs>
+<rect width="1200" height="700" fill="#ddd6c9"/><rect x="90" y="95" width="1020" height="510" rx="10" fill="url(#bg)"/>
+<rect x="125" y="130" width="950" height="440" rx="6" fill="none" stroke="#9da49c" stroke-width="4"/><rect x="150" y="155" width="900" height="390" rx="4" fill="none" stroke="#505752" stroke-width="2"/>
+<g fill="none" stroke="#939b92" stroke-width="4">
+<path d="M175 220 C210 165 260 165 295 205 C255 205 225 230 205 270 C195 250 185 235 175 220Z"/><path d="M1025 480 C990 535 940 535 905 495 C945 495 975 470 995 430 C1005 450 1015 465 1025 480Z"/>
+<path d="M205 265 C230 245 255 220 275 195 M995 435 C970 455 945 480 925 505"/>
+<circle cx="206" cy="215" r="8"/><circle cx="994" cy="485" r="8"/>
+</g>
+<text x="600" y="340" text-anchor="middle" fill="#f7f5ef" font-family="Arial,Helvetica,sans-serif" font-size="72" font-weight="700">YOUR NAME</text>
+<text x="600" y="407" text-anchor="middle" fill="#c5c9c3" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700" letter-spacing="9">1603</text>
+<text x="600" y="473" text-anchor="middle" fill="#8e968e" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="5">BOTANICAL CORNER</text>
+</svg>
