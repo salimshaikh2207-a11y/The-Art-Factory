@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Customise an Engraved & Charcoal nameplate from The Art Factory.">
+<title>Customize Engraved & Charcoal | The Art Factory</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="announcement">Mumbai-made custom nameplates • Design approval before production</div>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">TAF</span><span><strong>THE ART FACTORY</strong><small>Custom Nameplates & Signs</small></span></a>
+<nav class="desktop-nav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="customizer.html">Customize</a><a href="gallery.html">Gallery</a><a href="corporate.html">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<div class="header-actions"><a class="icon-btn" href="cart.html">🛒 <span id="cartCount">0</span></a><button class="menu-btn" id="menuBtn">☰</button></div></header>
+<div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="customizer.html">Customize</a><a href="gallery.html">Gallery</a><a href="corporate.html">Corporate</a><a href="contact.html">Contact</a></div>
+
+<main class="section-pad"><p class="eyebrow">ENGRAVED & CHARCOAL CUSTOMIZER</p><h1 id="engravedTitle">Create your nameplate</h1>
+<p class="lead">Pick a material and design, then enter the details. No design software is needed.</p>
+<div class="customizer">
+<div>
+<div class="preview"><div class="preview-surface"><div class="engraved-live-preview" id="engravedPreview">
+<img id="engravedPreviewImage" src="assets/engraved-classic-border.svg" alt="Selected nameplate design preview">
+<div class="preview-overlay"><span id="engravedNamePreview">YOUR NAME</span><small id="engravedNumberPreview">HOUSE / FLAT NO.</small></div>
+</div></div></div>
+<p class="muted">Live preview is illustrative. Final artwork follows the chosen production template and is approved before production.</p>
+</div>
+
+<form class="form-card" id="engravedForm">
+<fieldset><legend>1. Material</legend>
+<div class="variant-grid engraved-material-grid">
+<label class="variant-option"><input type="radio" name="material" value="Clear Cast Acrylic" checked><span>Clear Cast</span><small>Engraved acrylic</small></label>
+<label class="variant-option"><input type="radio" name="material" value="Charcoal Wood"><span>Charcoal</span><small>Raised acrylic letters</small></label>
+</div></fieldset>
+
+<label>2. Design / Border<select id="engravedDesign" name="design"></select><span class="field-note">The selected design determines the finished shape.</span></label>
+
+<label>3. Size<select name="size"><option>12 × 6 inch</option><option>16 × 8 inch</option><option>24 × 8 inch</option><option>Custom Size</option></select></label>
+
+<label>4. Name / Main Text<input name="name" maxlength="40" placeholder="e.g. Salim Shaikh" required></label>
+<label>5. House / Flat Number<input name="number" maxlength="20" placeholder="e.g. 1603"></label>
+
+<label>6. Language<select name="language"><option>English</option><option>Hindi</option><option>Marathi</option></select></label>
+<label>7. Font<select id="engravedFont" name="font"></select></label>
+
+<label>8. Letter Style / Colour<select name="letterColor">
+<option value="Gold">Gold</option><option value="Silver">Silver</option><option value="Rose Gold">Rose Gold</option><option value="White">White</option><option value="Black">Black</option><option value="Red">Red</option><option value="Royal Blue">Royal Blue</option><option value="Navy Blue">Navy Blue</option><option value="Forest Green">Forest Green</option><option value="Wine Red/Burgundy">Wine Red/Burgundy</option>
+<option value="Copper">Copper</option><option value="Champagne Gold">Champagne Gold</option><option value="Metallic Blue">Metallic Blue</option><option value="Metallic Green">Metallic Green</option>
+</select><span class="field-note">Other colours, finishes or special letter treatments are handled through Contact Us.</span></label>
+
+<label>9. LED<select name="led"><option>No LED</option><option>Warm White LED</option><option>Cool White LED</option><option>RGB LED</option></select><span class="field-note">LED is offered where the selected material and design construction supports it.</span></label>
+
+<div class="panel" style="margin-top:18px"><p class="eyebrow">PRODUCTION NOTE</p><p class="muted">Minimum finished letter height: <strong>1 inch / 25.4 mm</strong>. Font weights and spacing are adapted for production.</p></div>
+<p class="muted">Online customization covers standard options. Logos, custom artwork, special dimensions and unusual material requests → Contact Us.</p>
+<button class="btn btn-dark full" type="submit">Add to Cart & Continue</button>
+</form></div></main>
+
+<footer class="site-footer"><div class="footer-bottom"><span>© 2026 The Art Factory</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="shipping-returns.html">Shipping & Returns</a></span><span>WhatsApp +91 98705 39815</span></div></footer>
+<script src="app.js"></script></body></html>
