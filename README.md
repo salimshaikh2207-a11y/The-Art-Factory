@@ -6,6 +6,10 @@ Static website for The Art Factory, a Mumbai-based custom nameplate and sign bus
 - Home, shop, gallery, corporate, contact and legal pages
 - Responsive mobile/desktop layout
 - Nameplate customizer with four style variants
+- Acrylic debossed or white/black glass material selection
+- Acrylic plate and letter colour choices
+- Glass frosted lettering
+- Glass-only gold/silver diamond backdrop and LED lighting options
 - Live text preview
 - Size, finish and lighting options
 - Price calculation
