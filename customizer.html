@@ -1,26 +1,11 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Customise your The Art Factory acrylic or glass nameplate. Choose material, colours, size and optional glass LED lighting."><title>Customize Your Nameplate | The Art Factory</title><link rel="stylesheet" href="styles.css"></head><body>
-<div class="announcement">Mumbai-made custom nameplates • Acrylic & Glass • Design approval before production</div>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Customise a The Art Factory nameplate."><title>Customize | The Art Factory</title><link rel="stylesheet" href="styles.css"></head><body>
+<div class="announcement">Mumbai-made custom nameplates • Standard options online • Custom requests by Contact Us</div>
 <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">TAF</span><span><strong>THE ART FACTORY</strong><small>Custom Nameplates & Signs</small></span></a><nav class="desktop-nav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="customizer.html">Customize</a><a href="gallery.html">Gallery</a><a href="corporate.html">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><div class="header-actions"><a class="icon-btn" href="cart.html">🛒 <span id="cartCount">0</span></a><button class="menu-btn" id="menuBtn">☰</button></div></header>
 <div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="customizer.html">Customize</a><a href="gallery.html">Gallery</a><a href="corporate.html">Corporate</a><a href="contact.html">Contact</a></div>
-<main class="section-pad"><p class="eyebrow">PRODUCT CUSTOMIZER</p><h1 id="productTitle">Signature Debossed Nameplate</h1><p class="lead">Create your plate your way. Choose acrylic or glass, then personalise the colours, size and glass-only extras.</p>
-<div class="customizer">
-<div><div class="preview"><div class="preview-surface"><div class="mini-plate large" id="platePreview" data-material="Acrylic Debossed" data-plate="Black" data-letter="White" data-diamond="None" data-led="No LED" data-variant="1"><span id="namePreview">YOUR NAME</span><small id="numberPreview">HOUSE / FLAT NO.</small></div></div></div><p class="muted">Live preview is a visual guide. Final production artwork and exact material appearance are confirmed before production.</p></div>
-<form class="form-card" id="customForm">
-<fieldset><legend>1. Design style</legend><div class="variant-grid"><label class="variant-option"><input type="radio" name="variant" value="1" checked><span>01</span><small>Classic</small></label><label class="variant-option"><input type="radio" name="variant" value="2"><span>02</span><small>Minimal</small></label><label class="variant-option"><input type="radio" name="variant" value="3"><span>03</span><small>Bold</small></label><label class="variant-option"><input type="radio" name="variant" value="4"><span>04</span><small>Modern</small></label></div></fieldset>
-<label>Name<input name="name" maxlength="40" placeholder="e.g. Salim Shaikh" required></label>
-<label>House / Flat / Suite Number<input name="number" maxlength="20" placeholder="e.g. 1603"></label>
-<label>Material<select name="material"><option value="Acrylic Debossed">Acrylic Debossed</option><option value="Glass">Glass</option></select></label>
-<div class="two-col"><label>Size<select name="size"><option>12 × 6 inch</option><option>15 × 7 inch</option><option>18 × 8 inch</option><option>Custom size</option></select></label><label>Plate Colour<select id="plateColor" name="plateColor"></select></label></div>
-<div id="acrylicExtras">
-<label>Letter Colour<select id="letterColor" name="letterColor"></select><span class="field-note" id="letterHint">Choose the colour of your acrylic lettering.</span></label>
-</div>
-<div id="glassExtras" style="display:none">
-<label>Letter Colour<select id="letterColor" name="letterColor"></select><span class="field-note" id="letterHint">Glass is supplied with frosted lettering.</span></label>
-<div id="diamondWrap"><label>Diamond Backdrop<select id="diamond" name="diamond"><option>None</option><option>Gold Diamond</option><option>Silver Diamond</option></select><span class="field-note">Optional diamond accent available on glass plates only.</span></label></div>
-<div id="ledWrap"><label>LED Lighting<select id="led" name="led"><option>No LED</option><option>Warm White LED</option><option>Cool White LED</option><option>RGB LED</option></select><span class="field-note">LED is available on glass plates only.</span></label></div>
-</div>
-
-<div class="price-box"><span>Estimated starting total</span><strong id="livePrice">₹999</strong></div>
-<p class="muted">Final quote may vary for custom artwork, dimensions, installation or special requests.</p>
-<button class="btn btn-dark full" type="submit">Add to Cart</button>
-</form></div></main><script src="app.js"></script></body></html>
+<main class="section-pad"><p class="eyebrow">CUSTOMIZER</p><h1 id="customizerTitle">Choose your product</h1><p class="lead" id="customizerLead">Start with a category. The form changes to match that construction.</p>
+<div id="categoryChooser" class="category-grid category-grid-three"><a class="category-card" href="customizer.html?category=debossed"><span class="cat-icon">▣</span><div><h3>Debossed</h3><p>Two-layer acrylic.</p></div></a><a class="category-card" href="customizer.html?category=embossed"><span class="cat-icon">◈</span><div><h3>Embossed</h3><p>Acrylic or Glass.</p></div></a><a class="category-card" href="engraved-customizer.html"><span class="cat-icon">✦</span><div><h3>Engraved & Charcoal</h3><p>Clear Cast Acrylic or Charcoal Wood.</p></div></a></div>
+<div id="customizerWorkspace" class="customizer-workspace" style="display:none">
+<div class="customizer"><div><div class="preview"><div class="preview-surface"><div class="generic-live-preview" id="genericPreview"><div class="generic-plate" id="genericPlate"><span id="genericName">YOUR NAME</span><small id="genericNumber">HOUSE / FLAT NO.</small></div></div></div></div><p class="muted">Live preview is illustrative. Final production artwork and exact material appearance are confirmed before production.</p></div>
+<form class="form-card" id="genericForm"></form></div></div>
+</main>
+<footer class="site-footer"><div class="footer-bottom"><span>© 2026 The Art Factory</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="shipping-returns.html">Shipping & Returns</a></span><span>WhatsApp +91 98705 39815</span></div></footer><script src="app.js"></script></body></html>
