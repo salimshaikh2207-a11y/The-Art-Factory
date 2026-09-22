@@ -89,3 +89,69 @@ function initCart(){
   else lines.push("Total: "+money(numericTotal));
   const wa=document.querySelector("#waOrder"); if(wa)wa.href="https://wa.me/919870539815?text="+encodeURIComponent(lines.join("\n"));
 }
+
+const ENGRAVED_DESIGNS={
+  "Classic Border":{shape:"Rectangle",image:"assets/engraved-classic-border.svg"},
+  "Botanical Corner":{shape:"Rectangle",image:"assets/engraved-botanical-corner.svg"},
+  "Decorative Panel":{shape:"Rectangle",image:"assets/engraved-decorative-panel.svg"},
+  "Luxe LED":{shape:"Rectangle",image:"assets/engraved-luxe-led.svg"}
+};
+const ENGRAVED_FONTS={
+  "English":["Montserrat — Modern","Poppins — Premium","DM Sans — Minimal","Lato — Classic","Nunito Sans — Friendly"],
+  "Hindi":["Noto Sans Devanagari — Modern","Mukta — Indian / Balanced","Hind — Minimal / Modern","Anek Devanagari — Contemporary","Khand — Stylish / Narrow"],
+  "Marathi":["Noto Sans Devanagari — Modern","Mukta — Indian / Balanced","Hind — Minimal / Modern","Anek Devanagari — Contemporary","Khand — Stylish / Narrow"]
+};
+function fillEngravedDesigns(){
+  const el=document.getElementById("engravedDesign"); if(!el)return;
+  el.innerHTML=Object.keys(ENGRAVED_DESIGNS).map(x=>"<option value=\""+x+"\">"+x+" — "+ENGRAVED_DESIGNS[x].shape+"</option>").join("");
+  const wanted=new URLSearchParams(location.search).get("design");
+  if(wanted&&ENGRAVED_DESIGNS[wanted])el.value=wanted;
+}
+function initEngravedCustomizer(){
+  const form=document.getElementById("engravedForm"); if(!form)return;
+  fillEngravedDesigns();
+  const title=document.getElementById("engravedTitle");
+  const image=document.getElementById("engravedPreviewImage");
+  const namePreview=document.getElementById("engravedNamePreview");
+  const numberPreview=document.getElementById("engravedNumberPreview");
+  const font=document.getElementById("engravedFont");
+  const design=form.querySelector('[name="design"]');
+  const language=form.querySelector('[name="language"]');
+  function syncFonts(){
+    const items=ENGRAVED_FONTS[language.value]||ENGRAVED_FONTS.English;
+    font.innerHTML=items.map(x=>"<option value=\""+x+"\">"+x+"</option>").join("");
+    update();
+  }
+  function update(){
+    const d=Object.fromEntries(new FormData(form).entries());
+    const info=ENGRAVED_DESIGNS[d.design]||ENGRAVED_DESIGNS["Classic Border"];
+    if(image){image.src=info.image;image.alt=d.design+" nameplate preview";}
+    if(title)title.textContent=(d.design?d.design+" · ":"")+"Create your nameplate";
+    if(namePreview)namePreview.textContent=d.name||"YOUR NAME";
+    if(numberPreview)numberPreview.textContent=d.number||"HOUSE / FLAT NO.";
+  }
+  language.addEventListener("change",syncFonts);
+  form.querySelectorAll("input,select").forEach(el=>el.addEventListener("input",update));
+  syncFonts();
+  form.onsubmit=e=>{
+    e.preventDefault();
+    const d=Object.fromEntries(new FormData(form).entries());
+    const info=ENGRAVED_DESIGNS[d.design]||ENGRAVED_DESIGNS["Classic Border"];
+    cart.push({
+      id:Date.now(),product:"Engraved & Charcoal Nameplate",quote:true,
+      design:d.design,shape:info.shape,material:d.material,name:d.name,number:d.number,
+      size:d.size,language:d.language,font:d.font,letterColor:d.letterColor,led:d.led,price:null
+    });
+    saveCart();updateCart();location.href="cart.html";
+  };
+}
+function init(){
+  updateCart();
+  renderProducts();
+  initCustomizer();
+  initEngravedCustomizer();
+  initCart();
+  const m=document.querySelector("#menuBtn"),n=document.querySelector("#mobileNav");
+  if(m&&n)m.onclick=()=>n.classList.toggle("open");
+}
+document.addEventListener("DOMContentLoaded",init);
