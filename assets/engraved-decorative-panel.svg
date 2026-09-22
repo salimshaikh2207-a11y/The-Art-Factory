@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+<title id="t">Decorative Panel engraved charcoal nameplate</title><desc id="d">Dark charcoal rectangular plate with a decorative engraved panel on the left side and a clean name area.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#101313"/><stop offset=".5" stop-color="#222725"/><stop offset="1" stop-color="#101313"/></linearGradient></defs>
+<rect width="1200" height="700" fill="#ddd6c9"/><rect x="90" y="95" width="1020" height="510" rx="10" fill="url(#bg)"/>
+<rect x="125" y="130" width="950" height="440" rx="6" fill="none" stroke="#9da39c" stroke-width="4"/>
+<rect x="155" y="160" width="265" height="380" rx="4" fill="none" stroke="#626a63" stroke-width="2"/>
+<g fill="none" stroke="#8d958c" stroke-width="4">
+<path d="M185 245 Q250 170 325 245 Q250 300 185 245Z"/><path d="M185 455 Q250 530 325 455 Q250 400 185 455Z"/>
+<path d="M250 185 V515 M175 350 H350"/>
+<circle cx="250" cy="350" r="45"/><path d="M220 320 L280 380 M280 320 L220 380"/>
+</g>
+<line x1="455" y1="190" x2="455" y2="510" stroke="#4e5550" stroke-width="2"/>
+<text x="760" y="335" text-anchor="middle" fill="#f7f5ef" font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="700">YOUR NAME</text>
+<text x="760" y="405" text-anchor="middle" fill="#c5c9c3" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700" letter-spacing="9">1603</text>
+<text x="760" y="472" text-anchor="middle" fill="#8e968e" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="5">DECORATIVE PANEL</text>
+</svg>
