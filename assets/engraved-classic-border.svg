@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+<title id="t">Classic Border engraved charcoal nameplate</title><desc id="d">Dark charcoal rectangular plate with a clean double engraved border and raised light lettering.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#242927"/><stop offset="1" stop-color="#0d1010"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#000" flood-opacity=".28"/></filter></defs>
+<rect width="1200" height="700" fill="#ddd6c9"/>
+<rect x="90" y="95" width="1020" height="510" rx="12" fill="url(#bg)" filter="url(#shadow)"/>
+<rect x="125" y="130" width="950" height="440" rx="6" fill="none" stroke="#a9ada5" stroke-width="4"/>
+<rect x="150" y="155" width="900" height="390" rx="4" fill="none" stroke="#5b625d" stroke-width="2"/>
+<path d="M180 200H440 M760 200H1020 M180 500H440 M760 500H1020" stroke="#737a73" stroke-width="3"/>
+<text x="600" y="335" text-anchor="middle" fill="#f7f5ef" font-family="Arial,Helvetica,sans-serif" font-size="74" font-weight="700" letter-spacing="1">YOUR NAME</text>
+<text x="600" y="405" text-anchor="middle" fill="#c5c9c3" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" letter-spacing="9">1603</text>
+<text x="600" y="470" text-anchor="middle" fill="#8c938c" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="5">CLASSIC BORDER</text>
+</svg>
