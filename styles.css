@@ -67,3 +67,27 @@
 .sample-trio .hq-sample,.mini-work-grid .hq-sample{width:100%;aspect-ratio:4/3;object-fit:cover}
 .about-layout .hq-sample{width:100%;border-radius:18px;object-fit:cover}
 @media(max-width:760px){.choice-card>.hq-sample{height:260px}}
+
+/* Cohesive premium showroom photography — 2026-09-23 */
+.clean-hero-visual,.organized-collections>a,.organized-samples>a,.gallery-card,.shop-card,.choice-card{background:#f4efe7}
+.clean-hero-visual>img{object-fit:cover;padding:0}
+.hq-sample{background:#f2ece3;object-position:center;transition:transform .45s ease,filter .3s ease}
+.organized-collections>a>img,.organized-shop>a>img,.organized-chooser>a>img{height:300px;object-fit:cover;padding:0}
+.small-sample{height:300px;background:#f2ece3}
+.small-sample .hq-sample{height:100%;width:100%;object-fit:cover}
+.organized-samples>a{padding-bottom:18px}
+.organized-samples .hq-sample{width:100%;height:270px;aspect-ratio:auto;object-fit:cover}
+.organized-samples>a:hover .hq-sample,.organized-collections>a:hover .hq-sample,.gallery-card:hover .hq-sample,.shop-card:hover .hq-sample,.choice-card:hover .hq-sample{transform:scale(1.025)}
+.gallery-grid{gap:22px}.gallery-card{box-shadow:0 8px 30px rgba(32,25,16,.05)}
+.gallery-card .hq-sample{width:100%;aspect-ratio:1/1;object-fit:cover}
+.gallery-card>div:last-child{background:#fff}
+.shop-card>.hq-sample{aspect-ratio:4/3;object-fit:cover}
+.choice-card>.hq-sample{height:300px;object-fit:cover}
+.product-visual .hq-sample{object-fit:cover}
+.about-layout .hq-sample{aspect-ratio:4/3;object-fit:cover}
+@media(max-width:760px){
+ .organized-collections>a>img,.organized-shop>a>img,.organized-chooser>a>img,.small-sample{height:260px}
+ .organized-samples .hq-sample{height:260px}
+ .gallery-grid{gap:14px}
+ .choice-card>.hq-sample{height:260px}
+}
