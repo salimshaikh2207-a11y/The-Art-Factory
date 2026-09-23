@@ -1,0 +1,18 @@
+THE ART FACTORY — HIGH QUALITY WEBSITE IMAGES
+
+Upload ALL .webp files in this ZIP into the GitHub repository folder:
+
+assets/
+
+Repository:
+salimshaikh2207-a11y/The-Art-Factory
+
+Important:
+- Keep the filenames exactly as provided.
+- Do not upload them into a subfolder inside assets.
+- GitHub may ask whether to replace files with the same names. Replace them where applicable.
+- sample-mandala-charcoal-led-hq.webp is an additional high-quality asset.
+
+After uploading, return to ChatGPT and say: uploaded
+
+ChatGPT will then update the website code to use the individual high-resolution files and remove the old sprite-sheet image system.
