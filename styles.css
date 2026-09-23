@@ -56,3 +56,14 @@
 .sample-img{image-rendering:auto;background-color:#e7e0d6}
 @media(max-width:1050px){.clean-hero{grid-template-columns:1fr;gap:28px}.clean-hero-visual{min-height:460px}.clean-hero-visual>img{height:460px}.conversion-bar{margin:0 24px;grid-template-columns:1fr 1fr}.conversion-bar>div:nth-child(2){border-right:0}.organized-collections,.organized-shop,.organized-chooser{grid-template-columns:1fr 1fr}.organized-collections>a:last-child,.organized-shop>a:last-child,.organized-chooser>a:last-child{grid-column:span 2}.organized-samples,.gallery-samples{grid-template-columns:repeat(2,1fr)}.gallery-feature{grid-template-columns:1fr}.decision-panel{margin-left:0;margin-right:0}}
 @media(max-width:760px){.clean-hero{padding:42px 17px 24px}.clean-hero-copy h1{font-size:46px}.clean-hero-visual{min-height:390px}.clean-hero-visual>img{height:390px}.conversion-bar{margin:8px 17px;grid-template-columns:1fr}.conversion-bar>div{border-right:0;border-bottom:1px solid var(--line)}.conversion-bar>div:last-child{border-bottom:0}.organized-collections,.organized-shop,.organized-chooser,.organized-samples,.gallery-samples{grid-template-columns:1fr}.organized-collections>a:last-child,.organized-shop>a:last-child,.organized-chooser>a:last-child{grid-column:auto}.organized-collections>a>img,.organized-shop>a>img,.organized-chooser>a>img,.shop-thumb,.small-sample{height:235px}.small-sample .sample-img,.shop-thumb .sample-img,.organized-samples .sample-img{height:235px}.gallery-feature{padding:17px;gap:22px}.gallery-feature h2{font-size:34px}.decision-panel{padding:30px 24px;display:block}.decision-panel h2{font-size:35px}.decision-panel>div:last-child{margin-top:18px;display:block}.decision-panel .btn{width:100%;margin-top:8px}}
+
+/* Full-resolution product photography */
+.hq-sample{display:block;width:100%;height:100%;object-fit:cover;background:#eee7dc}
+.work-card .hq-sample,.gallery-card .hq-sample{width:100%;aspect-ratio:4/3;object-fit:cover}
+.collection-img .hq-sample{width:100%;height:100%;object-fit:cover}
+.shop-card>.hq-sample{width:100%;aspect-ratio:1/1;object-fit:cover}
+.choice-card>.hq-sample{width:100%;height:320px;object-fit:cover}
+.product-visual .hq-sample{width:100%;height:100%;object-fit:cover}
+.sample-trio .hq-sample,.mini-work-grid .hq-sample{width:100%;aspect-ratio:4/3;object-fit:cover}
+.about-layout .hq-sample{width:100%;border-radius:18px;object-fit:cover}
+@media(max-width:760px){.choice-card>.hq-sample{height:260px}}
