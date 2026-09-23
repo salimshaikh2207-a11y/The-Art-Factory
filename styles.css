@@ -91,3 +91,11 @@
  .gallery-grid{gap:14px}
  .choice-card>.hq-sample{height:260px}
 }
+
+/* Category-led gallery */
+.gallery-group-title{font:32px Georgia,serif;margin:38px 0 14px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.gallery-group{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:16px}
+.gallery-group:has(>a:only-child){grid-template-columns:minmax(280px,380px)}
+.gallery-special{margin-top:48px;padding:34px 38px;background:var(--cream);border-radius:18px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.gallery-special h2{font:34px Georgia,serif;margin:4px 0 8px}.gallery-special p:not(.eyebrow){color:var(--muted);max-width:760px}
+@media(max-width:760px){.gallery-group,.gallery-group:has(>a:only-child){grid-template-columns:1fr}.gallery-special{display:block;padding:26px 22px}.gallery-special .btn{margin-top:12px;width:100%}}
